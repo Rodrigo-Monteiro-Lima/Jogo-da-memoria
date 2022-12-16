@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+*, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  background-color: #3f88c5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+small {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  gap: .5rem;
+  padding: 0.5rem;
+  background-color: #fffa62;
+  width: 40vw;
+  border-radius: 0.625rem;
+  box-shadow: 0.875rem 0875rem 0 0 #0004;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 6rem;
+  cursor: pointer;
+  color: transparent;
+  background-color: #ffcf7f;
+  border-radius: 0.625rem;
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+  user-select: none;
+}
+
+.open {
+  background-color: #ff9000;
+  color: black;
+  transform: rotateY(0deg);
+}
+
+
+@media only screen and ( min-width : 446px ) and ( max-width : 1058px ) {
+  .board {
+    width: 408px;
+  }
+};
+@media only screen and ( min-width : 445px ) {
+  .board {
+    width: 95vw !important;
+  }
+};
